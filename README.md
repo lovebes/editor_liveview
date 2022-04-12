@@ -1,5 +1,12 @@
 # EditorLiveview
 
+Used [Component X Software Blog Post](https://componentx.co.uk/blog/adding-trix-to-liveview) to test out if I can add
+editor tools for LiveView form. Using Basecamp's [Trix](https://github.com/basecamp/trix) editor, but I think any other
+editor can be used similarly.
+
+So cool.
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
