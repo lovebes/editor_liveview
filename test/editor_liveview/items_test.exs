@@ -21,7 +21,11 @@ defmodule EditorLiveview.ItemsTest do
     end
 
     test "create_item/1 with valid data creates a item" do
-      valid_attrs = %{desc_string: "some desc_string", desc_text: "some desc_text", name: "some name"}
+      valid_attrs = %{
+        desc_string: "some desc_string",
+        desc_text: "some desc_text",
+        name: "some name"
+      }
 
       assert {:ok, %Item{} = item} = Items.create_item(valid_attrs)
       assert item.desc_string == "some desc_string"
@@ -35,7 +39,12 @@ defmodule EditorLiveview.ItemsTest do
 
     test "update_item/2 with valid data updates the item" do
       item = item_fixture()
-      update_attrs = %{desc_string: "some updated desc_string", desc_text: "some updated desc_text", name: "some updated name"}
+
+      update_attrs = %{
+        desc_string: "some updated desc_string",
+        desc_text: "some updated desc_text",
+        name: "some updated name"
+      }
 
       assert {:ok, %Item{} = item} = Items.update_item(item, update_attrs)
       assert item.desc_string == "some updated desc_string"

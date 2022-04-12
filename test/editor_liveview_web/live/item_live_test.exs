@@ -5,7 +5,11 @@ defmodule EditorLiveviewWeb.ItemLiveTest do
   import EditorLiveview.ItemsFixtures
 
   @create_attrs %{desc_string: "some desc_string", desc_text: "some desc_text", name: "some name"}
-  @update_attrs %{desc_string: "some updated desc_string", desc_text: "some updated desc_text", name: "some updated name"}
+  @update_attrs %{
+    desc_string: "some updated desc_string",
+    desc_text: "some updated desc_text",
+    name: "some updated name"
+  }
   @invalid_attrs %{desc_string: nil, desc_text: nil, name: nil}
 
   defp create_item(_) do
