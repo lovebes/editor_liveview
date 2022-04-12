@@ -20,7 +20,12 @@
     <%= label(f, :desc_text) %>
     <%= textarea(f, :desc_text) %>
     <%= error_tag(f, :desc_text) %>
+    <%= hidden_input(f, :information, phx_hook: "TrixEditor") %>
 
+    <div id="information-editor" phx-update="ignore">
+      <trix-editor input="page_information"></trix-editor>
+    </div>
+    <%= error_tag(f, :information) %>
     <div>
       <%= submit("Save", phx_disable_with: "Saving...") %>
     </div>
