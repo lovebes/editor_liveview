@@ -14,9 +14,9 @@
       src={Routes.static_path(@conn, "/assets/app.js")}
     >
     </script>
-    <link rel="stylesheet" type="text/css" href="trix.css" />
-    <script type="text/javascript" src="trix.js">
-    </script>
+    <!-- Trix editor -->
+    <link rel="stylesheet" type="text/css" href={Routes.static_path(@conn, "/assets/trix.css")} />
+    <script type="text/javascript" src={Routes.static_path(@conn, "/assets/trix.js")} />
   </head>
   <body>
     <header>
