@@ -34,8 +34,7 @@ let Hooks = {};
 Hooks.TrixEditor = {
   updated() {
     var trixEditor = document.querySelector("trix-editor");
-
-    if (null != trixEditor) {
+    if (this.el.value !== "" && null != trixEditor) {
       trixEditor.editor.loadHTML(this.el.value);
     }
   },

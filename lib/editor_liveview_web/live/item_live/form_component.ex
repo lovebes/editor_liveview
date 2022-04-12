@@ -24,6 +24,8 @@ defmodule EditorLiveviewWeb.ItemLive.FormComponent do
   end
 
   def handle_event("save", %{"item" => item_params}, socket) do
+    require IEx
+    IEx.pry()
     save_item(socket, socket.assigns.action, item_params)
   end
 
