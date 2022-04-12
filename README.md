@@ -5,7 +5,7 @@ editor tools for LiveView form. Using Basecamp's [Trix](https://github.com/basec
 editor can be used similarly.
 
 So cool.
-
+See how it works here in [Loom Video](https://www.loom.com/share/8d4a1b56ea76474c95bfaf177c1cfbb9)
 
 To start your Phoenix server:
 
