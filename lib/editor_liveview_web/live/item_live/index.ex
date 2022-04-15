@@ -40,6 +40,16 @@ defmodule EditorLiveviewWeb.ItemLive.Index do
     {:noreply, assign(socket, :items, list_items())}
   end
 
+  @impl true
+  def handle_event("validate", %{"item" => item_params}, socket) do
+    changeset =
+      socket.assigns.item
+      |> Items.change_item(item_params)
+      |> Map.put(:action, :validate)
+
+    {:noreply, assign(socket, :changeset, changeset)}
+  end
+
   defp list_items do
     Items.list_items()
   end

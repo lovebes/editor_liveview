@@ -16,6 +16,16 @@ defmodule EditorLiveviewWeb.ItemLive.Show do
      |> assign(:item, Items.get_item!(id))}
   end
 
+  @impl true
+  def handle_event("validate", %{"item" => item_params}, socket) do
+    changeset =
+      socket.assigns.item
+      |> Items.change_item(item_params)
+      |> Map.put(:action, :validate)
+
+    {:noreply, assign(socket, :changeset, changeset)}
+  end
+
   defp page_title(:show), do: "Show Item"
   defp page_title(:edit), do: "Edit Item"
 end

@@ -1,8 +1,7 @@
 # EditorLiveview
 
 Used [Component X Software Blog Post](https://componentx.co.uk/blog/adding-trix-to-liveview) to test out if I can add
-editor tools for LiveView form. Using Basecamp's [Trix](https://github.com/basecamp/trix) editor, but I think any other
-editor can be used similarly.
+editor tools for LiveView form. Using CKEditor.
 
 So cool.
 See how it works here in [Loom Video](https://www.loom.com/share/8d4a1b56ea76474c95bfaf177c1cfbb9)

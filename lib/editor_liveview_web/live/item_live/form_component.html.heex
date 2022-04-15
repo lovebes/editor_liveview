@@ -18,10 +18,8 @@
     <%= error_tag(f, :desc_string) %>
 
     <%= label(f, :desc_text) %>
-    <%= hidden_input(f, :desc_text, phx_hook: "TrixEditor") %>
-
-    <div id="desc_text-editor" phx-update="ignore">
-      <trix-editor input="item-form_desc_text"></trix-editor>
+    <div id="desc_text_wrapper" phx-update="ignore">
+      <%= textarea f, :desc_text, rows: 60, phx_hook: "CKEditor" %>
     </div>
     <%= error_tag(f, :desc_text) %>
     <div>

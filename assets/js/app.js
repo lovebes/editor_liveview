@@ -31,12 +31,29 @@ let csrfToken = document
   .getAttribute("content");
 
 let Hooks = {};
-Hooks.TrixEditor = {
+
+const renderCKEditor = (hook) => {
+  const id = "item-form_desc_text";
+  const ckId = `#cke_${id}`;
+  const element = document.querySelector(ckId);
+  if (!element) {
+    const CKEDITOR = window.CKEDITOR;
+    CKEDITOR.config.width = "100%";
+    CKEDITOR.config.height = "800px";
+    editor = CKEDITOR.replace(id);
+    editor.on("change", function () {
+      const data = this.getData();
+      hook.pushEvent("validate", { item: { desc_text: data } });
+    });
+  }
+};
+
+Hooks.CKEditor = {
   updated() {
-    var trixEditor = document.querySelector("trix-editor");
-    if (this.el.value !== "" && null != trixEditor) {
-      trixEditor.editor.loadHTML(this.el.value);
-    }
+    renderCKEditor(this);
+  },
+  mounted() {
+    renderCKEditor(this);
   },
 };
 
